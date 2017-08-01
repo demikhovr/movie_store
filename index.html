@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html>
+  <head lang="ru">
+    <meta charset="UTF-8">
+    <title>Movie Store</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.default.css">    
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header__title-logo"><a href="#">M<span class="visually-hidden">o</span><span class="header__title-icon"></span>vie Store</a></h1>
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a class="header__nav-link  header__nav-link--comics" href="#"><span class="header__nav-link-descrip">Comics</span></a>
+          </li>
+          <li class="header__nav-item  header__nav-item--active">
+            <a class="header__nav-link  header__nav-link--movie  header__nav-link" href="#"><span class="header__nav-link-descrip">Movies</span></a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__nav-link  header__nav-link--video" href="#"><span class="header__nav-link-descrip">Video</span></a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__nav-link  header__nav-link--game" href="#"><span class="header__nav-link-descrip">Game</span></a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__nav-link  header__nav-link--tv" href="#"><span class="header__nav-link-descrip">TV</span></a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__nav-link  header__nav-link--more" href="#"><span class="header__nav-link-descrip">More</span></a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="header__user-nav  user-nav">
+
+      <!-- Блок авторизации
+
+        <ul class="user-nav__list  user-nav__list--unlogged">
+          <li class="user-nav__item  user-nav__item--sign-in">
+            <a class="user-nav__link" href="#"><span class="visually-hidden">Sign-in</span></a>
+          </li>
+          <li class="user-nav__item  user-nav__item--sign-up">
+            <a class="user-nav__link" href="#"><span class="visually-hidden">Sign-up</span></a>
+          </li>
+        </ul> -->
+
+        <ul class="user-nav__list  user-nav__list--logged">
+          <li class="user-nav__item  user-nav__item--photo">
+            <a class="user-nav__link" href="#"><span class="visually-hidden">User Pic</span><img src="img/user-pic.jpg" alt="User's avatar"></a>
+          </li>          
+          <li class="user-nav__item  user-nav__item--profile">
+            <a class="user-nav__link" href="#">Carol Danvers</a>
+          </li>
+          <li class="user-nav__item  user-nav__item--comment">
+            <a class="user-nav__link  user-nav__link" href="#"><span class="visually-hidden">Write comment</span></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main-content">
+      <section class="slider">
+        <h2 class="visually-hidden">Top rated movies</h2>
+
+        <!-- Переключение слайдов на input'ах
+
+        <div class="owl-controls">
+          <input class="slider__radio" type="radio" id="slider-btn-1" name="toggle" checked>
+          <input class="slider__radio" type="radio" id="slider-btn-2" name="toggle">
+          <input class="slider__radio" type="radio" id="slider-btn-3" name="toggle">
+          <input class="slider__radio" type="radio" id="slider-btn-4" name="toggle">  
+          <div class="slider__controls  owl-dots">          
+            <label class="slider__btn-wrapper  owl-dot  active" for="slider-btn-1">
+              <div class="slider__btn"><img class="slider__director-pic" src="img/director-pic-1.jpg" alt="James Gunn"></div>
+              <p class="slider__director-name">James Gunn</p> 
+            </label>
+            <label class="slider__btn-wrapper  owl-dot" for="slider-btn-2">
+              <div class="slider__btn"><img class="slider__director-pic" src="img/director-pic-1.jpg" alt="James Gunn">
+              </div>
+              <p class="slider__director-name">James Gunn</p> 
+            </label>                          
+            <label class="slider__btn-wrapper  owl-dot" for="slider-btn-3">
+              <div class="slider__btn"><img class="slider__director-pic" src="img/director-pic-1.jpg" alt="James Gunn"></div>
+              <p class="slider__director-name">James Gunn</p> 
+            </label>                                
+            <label class="slider__btn-wrapper  owl-dot" for="slider-btn-4">
+              <div class="slider__btn"><img class="slider__director-pic" src="img/director-pic-1.jpg" alt="James Gunn"></div>
+              <p class="slider__director-name">James Gunn</p> 
+            </label> 
+          </div>
+        </div> -->
+
+        <ul class="slider__list  owl-carousel">
+          <li class="slider__item  owl-item">
+            <h3 class="slider__item-title"><span class="visually-hidden">Guardians of the Galaxy</span><img class="slider__item-title-pic" src="img/gogt-title.jpg" width="326" height="154" alt=""></h3>
+            <img class="slider__item-logo" src="img/gogt-logo.jpg" alt="Guardians of the Galaxy Logo" width="1338" height="685">
+            <a class="slider__item-btn" href="#" >Watch now</a>
+            <div class="slider__item-info  info">
+              <ul class="slider__list-left  info__list">
+                <li class="info__item">
+                  <h4 class="info__item-title">Published</h4>
+                  <p class="info__item-descr">Feb 20, 2014</p>
+                </li>
+                <li class="info__item">
+                  <h4 class="info__item-title">Updated</h4>
+                  <p class="info__item-descr">Feb 20, 2014</p>
+                </li>
+                <li class="info__item  info__item--rating">
+                  <h4 class="info__item-title">Rating</h4>
+                  <div class="info__item-descr  rating">
+                    <form class="rating__form" action="#" method="GET">
+                      <input class="rating__radio" id="rate-5" name="rating" type="radio" value="5" disabled>
+                      <label class="rating__star-btn" for="rate-5">5</label>
+                      <input class="rating__radio" id="rate-4" name="rating" type="radio" value="4" checked disabled>
+                      <label class="rating__star-btn" for="rate-4">4</label>
+                      <input class="rating__radio" id="rate-3" name="rating" type="radio" value="3" disabled>
+                      <label class="rating__star-btn" for="rate-3">3</label>
+                      <input class="rating__radio" id="rate-2" name="rating" type="radio" value="2" disabled>
+                      <label class="rating__star-btn" for="rate-2">2</label>
+                      <input class="rating__radio" id="rate-1" name="rating" type="radio" value="1" disabled>
+                      <label class="rating__star-btn" for="rate-1">1</label>
+                    </form>                    
+                  </div>
+                </li> 
+              </ul>
+              <ul class="slider__list-right  info__list">
+                <li class="info__item  likes">
+                  <h4 class="likes__title  visually-hidden">Like</h4>
+                  <form class="likes__form" action="#" method="GET" >
+                    <input class="likes__checkbox" id="like" type="checkbox" name="like" value="like">
+                    <label class="likes__btn" for="like"></label>
+                  </form>
+                  <a class="likes__link" href="#">2,548</a>
+                </li> 
+                <li class="info__item  info__item--reviews">
+                  <h4 class="info__item-title"><span class="visually-hidden">Reviews</span></h4>
+                  <p class="info__item-descr"><a class="info__item-btn" href="#">21</a></p>
+                </li>
+                <li class="info__item  info__item--downloads">
+                  <h4 class="info__item-title"><span class="visually-hidden">Downloads</span></h4>
+                  <p class="info__item-descr"><a class="info__item-btn" href="#">564</a></p>
+                </li>                
+              </ul>              
+            </div>
+          </li>
+          <li class="slider__item  owl-item">
+            <h3 class="slider__item-title"><span class="visually-hidden">Guardians of the Galaxy</span><img class="slider__item-title-pic" src="img/gogt-title.jpg" width="326" height="154" alt=""></h3>
+            <img class="slider__item-logo" src="img/gogt-logo.jpg" alt="Guardians of the Galaxy Logo" width="1338" height="685">
+            <a class="slider__item-btn" href="#" >Watch now</a>
+            <div class="slider__item-info  info">
+              <ul class="slider__list-left  info__list">
+                <li class="info__item">
+                  <h4 class="info__item-title">Published</h4>
+                  <p class="info__item-descr">Feb 20, 2014</p>
+                </li>
+                <li class="info__item">
+                  <h4 class="info__item-title">Updated</h4>
+                  <p class="info__item-descr">Feb 20, 2014</p>
+                </li>
+                <li class="info__item  info__item--rating">
+                  <h4 class="info__item-title">Rating</h4>
+                  <div class="info__item-descr  rating">
+                    <form class="rating__form" action="#" method="GET">
+                      <input class="rating__radio" id="rate-5" name="rating" type="radio" value="5" disabled>
+                      <label class="rating__star-btn" for="rate-5">5</label>
+                      <input class="rating__radio" id="rate-4" name="rating" type="radio" value="4" checked disabled>
+                      <label class="rating__star-btn" for="rate-4">4</label>
+                      <input class="rating__radio" id="rate-3" name="rating" type="radio" value="3" disabled>
+                      <label class="rating__star-btn" for="rate-3">3</label>
+                      <input class="rating__radio" id="rate-2" name="rating" type="radio" value="2" disabled>
+                      <label class="rating__star-btn" for="rate-2">2</label>
+                      <input class="rating__radio" id="rate-1" name="rating" type="radio" value="1" disabled>
+                      <label class="rating__star-btn" for="rate-1">1</label>
+                    </form>                    
+                  </div>
+                </li> 
+              </ul>
+              <ul class="slider__list-right  info__list">
+                <li class="info__item  likes">
+                  <h4 class="likes__title  visually-hidden">Like</h4>
+                  <form class="likes__form" action="#" method="GET" >
+                    <input class="likes__checkbox" id="like" type="checkbox" name="like" value="like">
+                    <label class="likes__btn" for="like"></label>
+                  </form>
+                  <a class="likes__link" href="#">2,548</a>
+                </li> 
+                <li class="info__item  info__item--reviews">
+                  <h4 class="info__item-title"><span class="visually-hidden">Reviews</span></h4>
+                  <p class="info__item-descr"><a class="info__item-btn" href="#">21</a></p>
+                </li>
+                <li class="info__item  info__item--downloads">
+                  <h4 class="info__item-title"><span class="visually-hidden">Downloads</span></h4>
+                  <p class="info__item-descr"><a class="info__item-btn" href="#">564</a></p>
+                </li>                
+              </ul>              
+            </div>
+          </li>
+          <li class="slider__item owl-item">
+            <h3 class="slider__item-title"><span class="visually-hidden">Guardians of the Galaxy</span><img class="slider__item-title-pic" src="img/gogt-title.jpg" width="326" height="154" alt=""></h3>
+            <img class="slider__item-logo" src="img/gogt-logo.jpg" alt="Guardians of the Galaxy Logo" width="1338" height="685">
+            <a class="slider__item-btn" href="#" >Watch now</a>
+            <div class="slider__item-info  info">
+              <ul class="slider__list-left  info__list">
+                <li class="info__item">
+                  <h4 class="info__item-title">Published</h4>
+                  <p class="info__item-descr">Feb 20, 2014</p>
+                </li>
+                <li class="info__item">
+                  <h4 class="info__item-title">Updated</h4>
+                  <p class="info__item-descr">Feb 20, 2014</p>
+                </li>
+                <li class="info__item  info__item--rating">
+                  <h4 class="info__item-title">Rating</h4>
+                  <div class="info__item-descr  rating">
+                    <form class="rating__form" action="#" method="GET">
+                      <input class="rating__radio" id="rate-5" name="rating" type="radio" value="5" disabled>
+                      <label class="rating__star-btn" for="rate-5">5</label>
+                      <input class="rating__radio" id="rate-4" name="rating" type="radio" value="4" checked disabled>
+                      <label class="rating__star-btn" for="rate-4">4</label>
+                      <input class="rating__radio" id="rate-3" name="rating" type="radio" value="3" disabled>
+                      <label class="rating__star-btn" for="rate-3">3</label>
+                      <input class="rating__radio" id="rate-2" name="rating" type="radio" value="2" disabled>
+                      <label class="rating__star-btn" for="rate-2">2</label>
+                      <input class="rating__radio" id="rate-1" name="rating" type="radio" value="1" disabled>
+                      <label class="rating__star-btn" for="rate-1">1</label>
+                    </form>                    
+                  </div>
+                </li> 
+              </ul>
+              <ul class="slider__list-right  info__list">
+                <li class="info__item  likes">
+                  <h4 class="likes__title  visually-hidden">Like</h4>
+                  <form class="likes__form" action="#" method="GET" >
+                    <input class="likes__checkbox" id="like" type="checkbox" name="like" value="like">
+                    <label class="likes__btn" for="like"></label>
+                  </form>
+                  <a class="likes__link" href="#">2,548</a>
+                </li> 
+                <li class="info__item  info__item--reviews">
+                  <h4 class="info__item-title"><span class="visually-hidden">Reviews</span></h4>
+                  <p class="info__item-descr"><a class="info__item-btn" href="#">21</a></p>
+                </li>
+                <li class="info__item  info__item--downloads">
+                  <h4 class="info__item-title"><span class="visually-hidden">Downloads</span></h4>
+                  <p class="info__item-descr"><a class="info__item-btn" href="#">564</a></p>
+                </li>                
+              </ul>              
+            </div>
+          </li>
+          <li class="slider__item owl-item">
+            <h3 class="slider__item-title"><span class="visually-hidden">Guardians of the Galaxy</span><img class="slider__item-title-pic" src="img/gogt-title.jpg" width="326" height="154" alt=""></h3>
+            <img class="slider__item-logo" src="img/gogt-logo.jpg" alt="Guardians of the Galaxy Logo" width="1338" height="685">
+            <a class="slider__item-btn" href="#" >Watch now</a>
+            <div class="slider__item-info  info">
+              <ul class="slider__list-left  info__list">
+                <li class="info__item">
+                  <h4 class="info__item-title">Published</h4>
+                  <p class="info__item-descr">Feb 20, 2014</p>
+                </li>
+                <li class="info__item">
+                  <h4 class="info__item-title">Updated</h4>
+                  <p class="info__item-descr">Feb 20, 2014</p>
+                </li>
+                <li class="info__item  info__item--rating">
+                  <h4 class="info__item-title">Rating</h4>
+                  <div class="info__item-descr  rating">
+                    <form class="rating__form" action="#" method="GET">
+                      <input class="rating__radio" id="rate-5" name="rating" type="radio" value="5" disabled>
+                      <label class="rating__star-btn" for="rate-5">5</label>
+                      <input class="rating__radio" id="rate-4" name="rating" type="radio" value="4" checked disabled>
+                      <label class="rating__star-btn" for="rate-4">4</label>
+                      <input class="rating__radio" id="rate-3" name="rating" type="radio" value="3" disabled>
+                      <label class="rating__star-btn" for="rate-3">3</label>
+                      <input class="rating__radio" id="rate-2" name="rating" type="radio" value="2" disabled>
+                      <label class="rating__star-btn" for="rate-2">2</label>
+                      <input class="rating__radio" id="rate-1" name="rating" type="radio" value="1" disabled>
+                      <label class="rating__star-btn" for="rate-1">1</label>
+                    </form>                    
+                  </div>
+                </li> 
+              </ul>
+              <ul class="slider__list-right  info__list">
+                <li class="info__item  likes">
+                  <h4 class="likes__title  visually-hidden">Like</h4>
+                  <form class="likes__form" action="#" method="GET" >
+                    <input class="likes__checkbox" id="like" type="checkbox" name="like" value="like">
+                    <label class="likes__btn" for="like"></label>
+                  </form>
+                  <a class="likes__link" href="#">2,548</a>
+                </li> 
+                <li class="info__item  info__item--reviews">
+                  <h4 class="info__item-title"><span class="visually-hidden">Reviews</span></h4>
+                  <p class="info__item-descr"><a class="info__item-btn" href="#">21</a></p>
+                </li>
+                <li class="info__item  info__item--downloads">
+                  <h4 class="info__item-title"><span class="visually-hidden">Downloads</span></h4>
+                  <p class="info__item-descr"><a class="info__item-btn" href="#">564</a></p>
+                </li>                
+              </ul>              
+            </div>
+          </li>      
+          
+        </ul>
+      </section>    
+      <section class="featured">
+        <div class="featured__title-wrapper">
+          <h2 class="featured__title">Featured movies</h2>
+          <div class="featured__sort">
+            <ul class="featured__sort-list">
+              <li class="featured__sort-item"><a class="featured__sort-link" href="#">New Realised</a></li>
+              <li class="featured__sort-item  featured__sort-item--active"><a class="featured__sort-link" href="#">Trailers &amp; Clips</a></li>
+            </ul>
+          </div>
+          <form class="featured__form" action="#">
+            <label for="search" class="visually-hidden">Search</label>
+            <input type="search" id="search" placeholder="Search...">
+            <button type="submit">Find</button>          
+          </form>
+        </div>
+        <ul class="featured__list  grid">
+          <li class="featured__item  grid-item">
+            <div class="movie">
+              <h3 class="movie__name"><a class="movie__name-link" href="#">Guardians of the Galaxy</a></h3>
+              <div class="movie__header">              
+                <div class="likes">
+                  <h4 class="likes__title  visually-hidden">Like</h4>
+                  <form class="likes__form" action="#" method="GET" >
+                    <input class="likes__checkbox" id="like-gotg" type="checkbox" name="like" value="like">
+                    <label class="likes__btn" for="like-gotg"></label>
+                  </form>
+                  <a class="likes__link" href="#">3,542</a>
+                </div>            
+              </div>            
+              <div class="movie__pic-wrapper"><img class="movie__pic" src="img/gotg.png" alt="movie"></div>
+              <a class="movie__btn  movie__btn--download" href="#"><span class="visually-hidden">Download</span></a>
+            </div>
+          </li>         
+          <li class="featured__item  grid-item  grid-item--height2">
+            <div class="movie  movie--high-box">    
+              <h3 class="movie__name"><a class="movie__name-link" href="#">Iron Man 3</a></h3>
+              <div class="movie__header">              
+                <ul class="info__list">
+                  <li class="info__item  likes">
+                    <h4 class="likes__title  visually-hidden">Like</h4>
+                    <form class="likes__form" action="#" method="GET" >
+                      <input class="likes__checkbox" id="like-im3" type="checkbox" name="like" value="like">
+                      <label class="likes__btn" for="like-im3"></label>
+                    </form>
+                    <a class="likes__link" href="#">4,681</a>
+                  </li> 
+                  <li class="info__item  info__item--reviews">
+                    <h4 class="info__item-title"><span class="visually-hidden">Reviews</span></h4>
+                    <p class="info__item-descr"><a class="info__item-btn" href="#">58</a></p>
+                  </li>
+                  <li class="info__item  info__item--downloads">
+                    <h4 class="info__item-title"><span class="visually-hidden">Downloads</span></h4>
+                    <p class="info__item-descr"><a class="info__item-btn" href="#">642</a></p>
+                  </li>                              
+                  <li class="info__item  info__item--rating">
+                    <h4 class="info__item-title">Rating:</h4>
+                    <div class="info__item-descr  rating">
+                      <form class="rating__form" action="#" method="GET">
+                        <input class="rating__radio" id="rate-5" name="rating" type="radio" value="5" disabled>
+                        <label class="rating__star-btn" for="rate-5">5</label>
+                        <input class="rating__radio" id="rate-4" name="rating" type="radio" value="4" checked disabled>
+                        <label class="rating__star-btn" for="rate-4">4</label>
+                        <input class="rating__radio" id="rate-3" name="rating" type="radio" value="3" disabled>
+                        <label class="rating__star-btn" for="rate-3">3</label>
+                        <input class="rating__radio" id="rate-2" name="rating" type="radio" value="2" disabled>
+                        <label class="rating__star-btn" for="rate-2">2</label>
+                        <input class="rating__radio" id="rate-1" name="rating" type="radio" value="1" disabled>
+                        <label class="rating__star-btn" for="rate-1">1</label>
+                      </form>                  
+                    </div>
+                  </li>
+                  <li class="info__item">
+                    <h4 class="info__item-title">Release Date:</h4>
+                    <p class="info__item-descr">May 03, 2013</p>
+                  </li>
+                </ul>            
+              </div>            
+              <div class="movie__pic-wrapper"><img class="movie__pic" src="img/im-3.jpg" alt="movie"></div>
+              <a class="movie__btn  movie__btn--play" href="#"><span class="visually-hidden">Download</span></a>
+            </div>
+          </li>
+          <li class="featured__item  grid-item">
+            <div class="movie">
+              <h3 class="movie__name"><a class="movie__name-link" href="#">Captain America</a></h3>
+              <div class="movie__header">              
+                <div class="likes">
+                  <h4 class="likes__title  visually-hidden">Like</h4>
+                  <form class="likes__form" action="#" method="GET" >
+                    <input class="likes__checkbox" id="like-ca2" type="checkbox" name="like" value="like">
+                    <label class="likes__btn" for="like-ca2"></label>
+                  </form>
+                  <a class="likes__link" href="#">2,248</a>
+                </div>            
+              </div>            
+              <div class="movie__pic-wrapper"><img class="movie__pic" src="img/ca-2.jpg" alt="movie"></div>
+              <a class="movie__btn  movie__btn--download" href="#"><span class="visually-hidden">Download</span></a>
+            </div>
+          </li>
+          <li class="featured__item  grid-item">
+            <div class="movie">
+              <h3 class="movie__name"><a class="movie__name-link" href="#">The Amazing Spider-Man 2</a></h3>
+              <div class="movie__header">              
+                <div class="likes">
+                  <h4 class="likes__title  visually-hidden">Like</h4>
+                  <form class="likes__form" action="#" method="GET" >
+                    <input class="likes__checkbox" id="like-tasm2" type="checkbox" name="like" value="like">
+                    <label class="likes__btn" for="like-tasm2"></label>
+                  </form>
+                  <a class="likes__link" href="#">2,951</a>
+                </div>            
+              </div>            
+              <div class="movie__pic-wrapper"><img class="movie__pic" src="img/tasm-2.jpg" alt="movie"></div>
+              <a class="movie__btn  movie__btn--download" href="#"><span class="visually-hidden">Download</span></a>
+            </div>
+          </li>
+          <li class="featured__item  grid-item">
+            <div class="movie">
+              <h3 class="movie__name"><a class="movie__name-link" href="#">The Incredible Hulk</a></h3>
+              <div class="movie__header">              
+                <div class="likes">
+                  <h4 class="likes__title  visually-hidden">Like</h4>
+                  <form class="likes__form" action="#" method="GET" >
+                    <input class="likes__checkbox" id="like-tih" type="checkbox" name="like" value="like">
+                    <label class="likes__btn" for="like-tih"></label>
+                  </form>
+                  <a class="likes__link" href="#">3,248</a>
+                </div>            
+              </div>            
+              <div class="movie__pic-wrapper"><img class="movie__pic" src="img/tih.jpg" alt="movie"></div>
+              <a class="movie__btn  movie__btn--download" href="#"><span class="visually-hidden">Download</span></a>
+            </div>
+          </li>
+          <li class="featured__item  grid-item">
+            <div class="movie">
+              <h3 class="movie__name"><a class="movie__name-link" href="#">The First Avenger</a></h3>
+              <div class="movie__header">              
+                <div class="likes">
+                  <h4 class="likes__title  visually-hidden">Like</h4>
+                  <form class="likes__form" action="#" method="GET" >
+                    <input class="likes__checkbox" id="like-tfa" type="checkbox" name="like" value="like">
+                    <label class="likes__btn" for="like-tfa"></label>
+                  </form>
+                  <a class="likes__link" href="#">3,234</a>
+                </div>            
+              </div>            
+              <div class="movie__pic-wrapper"><img class="movie__pic" src="img/tfa.jpg" alt="movie"></div>
+              <a class="movie__btn  movie__btn--download" href="#"><span class="visually-hidden">Download</span></a>
+            </div>
+          </li>                     
+          <li class="featured__item  grid-item  grid-item--width2">
+            <div class="movie  movie--trailer-box">
+              <h3 class="movie__name"><a class="movie__name-link" href="#">Thor 2</a></h3>                  
+              <div class="movie__trailer-wrapper"><video class="movie__trailer" poster="img/thor-2.jpg" src="#"></video></div>
+              <div class="movie__controls">
+                <button class="movie__play">Play</button>
+                <button class="movie__pause">Pause</button>
+                <div class="movie__scale"><div class="movie__bar"></div></div>
+              </div>              
+            </div>
+          </li>
+          <li class="featured__item  grid-item  grid-item--height2">
+            <div class="movie  movie--high-box">    
+              <h3 class="movie__name"><a class="movie__name-link" href="#">Wolverine</a></h3>
+              <div class="movie__header">              
+                <ul class="info__list">
+                  <li class="info__item  likes">
+                    <h4 class="likes__title  visually-hidden">Like</h4>
+                    <form class="likes__form" action="#" method="GET" >
+                      <input class="likes__checkbox" id="like-wolv" type="checkbox" name="like" value="like">
+                      <label class="likes__btn" for="like-wolv"></label>
+                    </form>
+                    <a class="likes__link" href="#">4,681</a>
+                  </li> 
+                  <li class="info__item  info__item--reviews">
+                    <h4 class="info__item-title"><span class="visually-hidden">Reviews</span></h4>
+                    <p class="info__item-descr"><a class="info__item-btn" href="#">58</a></p>
+                  </li>
+                  <li class="info__item  info__item--downloads">
+                    <h4 class="info__item-title"><span class="visually-hidden">Downloads</span></h4>
+                    <p class="info__item-descr"><a class="info__item-btn" href="#">156</a></p>
+                  </li>                              
+                  <li class="info__item  info__item--rating">
+                    <h4 class="info__item-title">Rating:</h4>
+                    <div class="info__item-descr  rating">
+                      <form class="rating__form" action="#" method="GET">
+                        <input class="rating__radio" id="rate-5" name="rating" type="radio" value="5" disabled>
+                        <label class="rating__star-btn" for="rate-5">5</label>
+                        <input class="rating__radio" id="rate-4" name="rating" type="radio" value="4" disabled>
+                        <label class="rating__star-btn" for="rate-4">4</label>
+                        <input class="rating__radio" id="rate-3" name="rating" type="radio" value="3" checked disabled>
+                        <label class="rating__star-btn" for="rate-3">3</label>
+                        <input class="rating__radio" id="rate-2" name="rating" type="radio" value="2" disabled>
+                        <label class="rating__star-btn" for="rate-2">2</label>
+                        <input class="rating__radio" id="rate-1" name="rating" type="radio" value="1" disabled>
+                        <label class="rating__star-btn" for="rate-1">1</label>
+                      </form>                  
+                    </div>
+                  </li>
+                  <li class="info__item">
+                    <h4 class="info__item-title">Release Date:</h4>
+                    <p class="info__item-descr">Jul 26, 2013</p>
+                  </li>
+                </ul>            
+              </div>            
+              <div class="movie__pic-wrapper"><img class="movie__pic" src="img/wolv.jpg" alt="MOVIE"></div>
+              <a class="movie__btn  movie__btn--play" href="#"><span class="visually-hidden">Download</span></a>
+            </div>
+          </li>
+          <li class="featured__item  grid-item  grid-item--width2">
+            <div class="movie  movie--trailer-box">
+              <h3 class="movie__name"><a class="movie__name-link" href="#">X-Men: First Class</a></h3>                  
+              <div class="movie__trailer-wrapper"><video class="movie__trailer" poster="img/x-men-fc.jpg" src="#"></video></div>
+              <div class="movie__controls">
+                <button class="movie__play">Play</button>
+                <button class="movie__pause">Pause</button>
+                <div class="movie__scale"><div class="movie__bar"></div></div>
+              </div>              
+            </div>
+          </li>
+          <li class="featured__item  grid-item  grid-item--height2">
+            <div class="movie  movie--high-box">    
+              <h3 class="movie__name"><a class="movie__name-link" href="#">Wolverine</a></h3>
+              <div class="movie__header">              
+                <ul class="info__list">
+                  <li class="info__item  likes">
+                    <h4 class="likes__title  visually-hidden">Like</h4>
+                    <form class="likes__form" action="#" method="GET" >
+                      <input class="likes__checkbox" id="like-wolv-2" type="checkbox" name="like" value="like">
+                      <label class="likes__btn" for="like-wolv-2"></label>
+                    </form>
+                    <a class="likes__link" href="#">4,681</a>
+                  </li> 
+                  <li class="info__item  info__item--reviews">
+                    <h4 class="info__item-title"><span class="visually-hidden">Reviews</span></h4>
+                    <p class="info__item-descr"><a class="info__item-btn" href="#">58</a></p>
+                  </li>
+                  <li class="info__item  info__item--downloads">
+                    <h4 class="info__item-title"><span class="visually-hidden">Downloads</span></h4>
+                    <p class="info__item-descr"><a class="info__item-btn" href="#">156</a></p>
+                  </li>                              
+                  <li class="info__item  info__item--rating">
+                    <h4 class="info__item-title">Rating:</h4>
+                    <div class="info__item-descr  rating">
+                      <form class="rating__form" action="#" method="GET">
+                        <input class="rating__radio" id="rate-5" name="rating" type="radio" value="5" disabled>
+                        <label class="rating__star-btn" for="rate-5">5</label>
+                        <input class="rating__radio" id="rate-4" name="rating" type="radio" value="4" disabled>
+                        <label class="rating__star-btn" for="rate-4">4</label>
+                        <input class="rating__radio" id="rate-3" name="rating" type="radio" value="3" checked disabled>
+                        <label class="rating__star-btn" for="rate-3">3</label>
+                        <input class="rating__radio" id="rate-2" name="rating" type="radio" value="2" disabled>
+                        <label class="rating__star-btn" for="rate-2">2</label>
+                        <input class="rating__radio" id="rate-1" name="rating" type="radio" value="1" disabled>
+                        <label class="rating__star-btn" for="rate-1">1</label>
+                      </form>                  
+                    </div>
+                  </li>
+                  <li class="info__item">
+                    <h4 class="info__item-title">Release Date:</h4>
+                    <p class="info__item-descr">Jul 26, 2013</p>
+                  </li>
+                </ul>            
+              </div>            
+              <div class="movie__pic-wrapper"><img class="movie__pic" src="img/wolv.jpg" alt="movie"></div>
+              <a class="movie__btn  movie__btn--play" href="#"><span class="visually-hidden">Download</span></a>
+            </div>
+          </li>
+          <li class="featured__item  grid-item">
+            <div class="movie">
+              <h3 class="movie__name"><a class="movie__name-link" href="#">The Amazing Spider-Men</a></h3>
+              <div class="movie__header">              
+                <div class="likes">
+                  <h4 class="likes__title  visually-hidden">Like</h4>
+                  <form class="likes__form" action="#" method="GET" >
+                    <input class="likes__checkbox" id="like-tasm" type="checkbox" name="like" value="like">
+                    <label class="likes__btn" for="like-tasm"></label>
+                  </form>
+                  <a class="likes__link" href="#">2,534</a>
+                </div>            
+              </div>            
+              <div class="movie__pic-wrapper"><img class="movie__pic" src="img/tasm.jpg" alt="movie"></div>
+              <a class="movie__btn  movie__btn--download" href="#"><span class="visually-hidden">Download</span></a>
+            </div>
+          </li>                           
+        </ul>
+      </section>
+      <footer class="footer">
+        <div class="footer__wrapper">
+          <p class="footer__title"><span>Downloading - </span><span class="footer__downloading-name">Captain America</span><span class="footer__downloading-speed"> (105 / 215 MB)</span></p>
+          <div class="footer__controls">
+            <button class="footer__btn  footer__btn--delete"><span class="visually-hidden">delete</span></button>
+            <button class="footer__btn  footer__btn--repeat"><span class="visually-hidden">repeat</span></button>
+            <button class="footer__btn  footer__btn--cancel"><span class="visually-hidden">cansel</span></button>
+          </div>
+        </div>        
+      </footer>
+    </main>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script>
+      var elem = document.querySelector('.grid');
+      var msnry = new Masonry( elem, {
+    // options    
+    // element argument can be a selector string
+    //   for an individual element
+      itemSelector: '.grid-item',
+      fitWidth: true,
+      gutter: 20,
+      columnWidth: 210
+  // options
+      });
+    </script>
+    <script>
+      $(document).ready(function() {
+  
+  // Slider OWL-2
+      $(".owl-carousel").owlCarousel({
+      items : 1,
+      nav : true,
+      loop : true,
+      autoplay : true,
+      autoplayHoverPause : true,
+      fluidSpeed : 400,
+      autoplaySpeed : 400,
+      navSpeed : 400,
+      dotsSpeed : 400,
+      dragEndSpeed : 400
+        });
+      });
+    </script>
+  </body>
+</html>
